@@ -10,24 +10,17 @@
       ></v-text-field>
     </v-col>
 
-    <v-list flat subheader>
-      <v-list-item-group multiple active-class="">
-        <div v-for="(tarefa, index) in $store.state.tarefas" :key="index">
-          <Tarefa :tarefa="tarefa" />
-        </div>
-      </v-list-item-group>
-    </v-list>
+    <ListaTarefas />
   </div>
 </template>
 
 <script>
-/* import HelloWorld from '../components/HelloWorld';
- */
-import Tarefa from '../components/Tarefa.vue';
+import ListaTarefas from '../components/ListaTarefas.vue';
+
 export default {
   name: 'Home',
 
-  components: { Tarefa },
+  components: { ListaTarefas },
 
   data() {
     return {
@@ -41,7 +34,6 @@ export default {
 
   methods: {
     handleAddTarefa() {
-      //this.$store.commit('adicionarTarefa', this.campoInput);
       this.$store.dispatch('adicionarTarefa', this.campoInput);
       this.campoInput = null;
     },

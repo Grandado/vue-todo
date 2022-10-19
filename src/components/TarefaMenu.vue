@@ -3,7 +3,7 @@
     <v-menu offset-y>
       <template v-slot:activator="{ on, attrs }">
         <v-btn v-bind="attrs" v-on="on" icon>
-          <v-icon dark>mdi-cog</v-icon></v-btn
+          <v-icon color="grey darken-3">mdi-cog</v-icon></v-btn
         >
       </template>
       <v-list>
